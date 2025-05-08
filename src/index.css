@@ -1,0 +1,64 @@
+:root {
+  --bg: #ffffff;
+  --bg-secondary: #f4f4f7;
+  --card: #ffffff;
+  --input-bg: #eeeeee;
+  --text: #111111;
+  --text-light: #555555;
+  --primary: #3366ff;
+}
+
+[data-theme='dark'] {
+  --bg: #1a1a1d;
+  --bg-secondary: #2a2a2f;
+  --card: #2a2a2a;
+  --input-bg: #333333;
+  --text: #f1f1f1;
+  --text-light: #bbbbbb;
+  --primary: #646cff;
+}
+
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Chat Layout for Desktop */
+@media (min-width: 768px) {
+  .chat-wrapper {
+    display: flex;
+    height: 100vh;
+  }
+
+  .chat-sidebar {
+    width: 350px;
+    background-color: #2a2a2f;
+    padding: 1rem;
+    overflow-y: auto;
+    border-right: 1px solid #444;
+  }
+
+  .chat-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1d;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 767px) {
+  .chat-wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .chat-sidebar, .chat-main {
+    width: 100%;
+  }
+}
